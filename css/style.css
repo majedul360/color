@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700&display=swap");
+* {
+  font-family: "kumbh sans", "sans-serif";
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #131313;
+  padding: 2rem 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  font-size: 3rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ff0844), to(#ffb199));
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+header nav {
+  margin-left: auto;
+}
+
+header nav a {
+  font-size: 2rem;
+  color: white;
+  margin-right: 5rem;
+}
+
+header nav .nav-btn {
+  background: -webkit-gradient(linear, left top, right top, from(#fcb045), color-stop(#fd1d1d), to(#833ab4));
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #131313;
+    padding-bottom: 3rem;
+    -webkit-transform: translateY(-115%);
+            transform: translateY(-115%);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  header nav.active {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  header nav a {
+    display: block;
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+  }
+  header nav .nav-btn {
+    margin: 1rem 9rem;
+    padding: 3rem;
+  }
+  header .menu-bar span {
+    width: 3rem;
+    height: 0.4rem;
+    background: white;
+    cursor: pointer;
+    margin: 0.7rem 0;
+    display: block;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  header .menu-bar span:nth-child(2).active {
+    opacity: 0;
+  }
+  header .menu-bar span:nth-child(1).active {
+    -webkit-transform: translateY(1.1rem) rotate(45deg);
+            transform: translateY(1.1rem) rotate(45deg);
+  }
+  header .menu-bar span:nth-child(3).active {
+    -webkit-transform: translateY(-1.1rem) rotate(-45deg);
+            transform: translateY(-1.1rem) rotate(-45deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
