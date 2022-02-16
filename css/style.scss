@@ -15,6 +15,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
 body {
@@ -69,7 +70,7 @@ header {
   top: 0;
   background: $bg;
   z-index: 100;
-  padding: 2rem 10%;
+  padding: 0 10%;
   display: flex;
   align-items: center;
 
@@ -87,6 +88,12 @@ header {
       font-size: 2rem;
       color: white;
       margin-right: 5rem;
+      padding: 2rem 0;
+      display: inline-block;
+
+      &.active {
+        border-bottom: 0.3rem solid red;
+      }
 
       &:hover {
         color: #833ab4;
@@ -106,7 +113,7 @@ header {
 }
 
 // home section
-.home {
+#home {
   background: #000000;
   display: flex;
   align-items: center;
@@ -136,7 +143,7 @@ header {
 }
 
 // about section
-.about {
+#about {
   .box-container {
     @include flex(center);
 
@@ -186,7 +193,7 @@ header {
 }
 
 // services section
-.service {
+#service {
   .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -248,7 +255,7 @@ header {
 }
 
 // about section
-.contact {
+#contact {
   .box-container {
     @include flex(center);
     gap: 5rem;
@@ -379,7 +386,11 @@ footer {
       right: 0;
       background: $bg;
       padding-bottom: 3rem;
-      transform: translateY(-115%);
+      transform: translateY(-135%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       transition: all 0.2s linear;
 
       &.active {
@@ -387,15 +398,14 @@ footer {
       }
 
       a {
-        display: block;
-        text-align: center;
-        margin: 3rem 0;
+        display: inline-block;
         font-size: 2.5rem;
+        margin-right: 0;
       }
 
       .nav-btn {
-        margin: 1rem 9rem;
-        padding: 3rem;
+        padding: 2rem 7rem;
+        margin-top: 2rem;
       }
     }
 

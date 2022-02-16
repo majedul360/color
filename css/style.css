@@ -13,6 +13,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
 body {
@@ -62,7 +63,7 @@ header {
   top: 0;
   background: #131313;
   z-index: 100;
-  padding: 2rem 10%;
+  padding: 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,6 +89,12 @@ header nav a {
   font-size: 2rem;
   color: white;
   margin-right: 5rem;
+  padding: 2rem 0;
+  display: inline-block;
+}
+
+header nav a.active {
+  border-bottom: 0.3rem solid red;
 }
 
 header nav a:hover {
@@ -105,7 +112,7 @@ header nav .nav-btn:hover {
   color: white;
 }
 
-.home {
+#home {
   background: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,23 +126,23 @@ header nav .nav-btn:hover {
   padding: 20rem 10%;
 }
 
-.home .content {
+#home .content {
   text-align: center;
 }
 
-.home .content h1 {
+#home .content h1 {
   font-size: 10rem;
   color: white;
 }
 
-.home .content h1 span {
+#home .content h1 span {
   background-image: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#ee0979));
   background-image: linear-gradient(to right, #ff6a00, #ee0979);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home .content p {
+#home .content p {
   font-size: 6rem;
   margin: 1rem 0;
   background-image: -webkit-gradient(linear, left top, right top, from(#8f0eff), to(#da22ff));
@@ -144,7 +151,7 @@ header nav .nav-btn:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.about .box-container {
+#about .box-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,7 +163,7 @@ header nav .nav-btn:hover {
   gap: 10rem;
 }
 
-.about .box-container .card {
+#about .box-container .card {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30rem;
           flex: 1 1 30rem;
@@ -175,18 +182,18 @@ header nav .nav-btn:hover {
           justify-content: center;
 }
 
-.about .box-container .card i {
+#about .box-container .card i {
   font-size: 15rem;
   color: white;
 }
 
-.about .box-container .box {
+#about .box-container .box {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
 }
 
-.about .box-container .box h3 {
+#about .box-container .box h3 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ff087b), to(#ed1a52));
   background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
   -webkit-background-clip: text;
@@ -195,7 +202,7 @@ header nav .nav-btn:hover {
   text-transform: uppercase;
 }
 
-.about .box-container .box h2 {
+#about .box-container .box h2 {
   background: -webkit-gradient(linear, left top, right top, from(#8f0eff), to(#da22ff));
   background: linear-gradient(to right, #8f0eff, #da22ff);
   -webkit-background-clip: text;
@@ -205,14 +212,14 @@ header nav .nav-btn:hover {
   margin: 2rem 0;
 }
 
-.about .box-container .box h4 {
+#about .box-container .box h4 {
   color: white;
   font-size: 3rem;
   text-transform: none;
   margin-bottom: 1rem;
 }
 
-.service .box-container {
+#service .box-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
@@ -220,50 +227,50 @@ header nav .nav-btn:hover {
   gap: 3rem;
 }
 
-.service .box {
+#service .box {
   text-align: center;
   padding: 12rem 0;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-.service .box:hover {
+#service .box:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.service .box:nth-child(1) {
+#service .box:nth-child(1) {
   background-image: -webkit-gradient(linear, left top, right top, from(#00dbde), to(#fc00ff));
   background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
 }
 
-.service .box:nth-child(2) {
+#service .box:nth-child(2) {
   background: -webkit-gradient(linear, left top, right top, from(#a6ffcb), color-stop(#12d8fa), to(#1fa2ff));
   background: linear-gradient(to right, #a6ffcb, #12d8fa, #1fa2ff);
 }
 
-.service .box:nth-child(3) {
+#service .box:nth-child(3) {
   background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
 }
 
-.service .box:nth-child(4) {
+#service .box:nth-child(4) {
   background-image: -webkit-gradient(linear, left top, right top, from(#00dbde), to(#fc00ff));
   background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
 }
 
-.service .box h3 {
+#service .box h3 {
   color: white;
   font-size: 2.5rem;
 }
 
-.service .box p {
+#service .box p {
   color: white;
   font-size: 2rem;
   font-weight: 500;
   margin: 2rem 0;
 }
 
-.service .box .black-btn {
+#service .box .black-btn {
   color: white;
   background-color: #000000;
   padding: 1rem 2rem;
@@ -273,7 +280,7 @@ header nav .nav-btn:hover {
   display: inline-block;
 }
 
-.contact .box-container {
+#contact .box-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,7 +293,7 @@ header nav .nav-btn:hover {
   gap: 5rem;
 }
 
-.contact .box-container .card {
+#contact .box-container .card {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30rem;
           flex: 1 1 30rem;
@@ -305,18 +312,18 @@ header nav .nav-btn:hover {
           justify-content: center;
 }
 
-.contact .box-container .card i {
+#contact .box-container .card i {
   font-size: 15rem;
   color: white;
 }
 
-.contact .box-container .box {
+#contact .box-container .box {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
 }
 
-.contact .box-container .box h3 {
+#contact .box-container .box h3 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ff087b), to(#ed1a52));
   background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
   -webkit-background-clip: text;
@@ -325,7 +332,7 @@ header nav .nav-btn:hover {
   text-transform: uppercase;
 }
 
-.contact .box-container .box h2 {
+#contact .box-container .box h2 {
   background: -webkit-gradient(linear, left top, right top, from(#8f0eff), to(#da22ff));
   background: linear-gradient(to right, #8f0eff, #da22ff);
   -webkit-background-clip: text;
@@ -335,7 +342,7 @@ header nav .nav-btn:hover {
   margin: 2rem 0;
 }
 
-.contact .box-container .box h4 {
+#contact .box-container .box h4 {
   color: white;
   font-size: 3rem;
   text-transform: none;
@@ -441,8 +448,21 @@ footer .container .box .icons i {
     right: 0;
     background: #131313;
     padding-bottom: 3rem;
-    -webkit-transform: translateY(-115%);
-            transform: translateY(-115%);
+    -webkit-transform: translateY(-135%);
+            transform: translateY(-135%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
   }
@@ -451,14 +471,13 @@ footer .container .box .icons i {
             transform: translateY(0%);
   }
   header nav a {
-    display: block;
-    text-align: center;
-    margin: 3rem 0;
+    display: inline-block;
     font-size: 2.5rem;
+    margin-right: 0;
   }
   header nav .nav-btn {
-    margin: 1rem 9rem;
-    padding: 3rem;
+    padding: 2rem 7rem;
+    margin-top: 2rem;
   }
   header .menu-bar span {
     width: 3rem;
